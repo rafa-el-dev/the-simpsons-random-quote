@@ -6,21 +6,28 @@ const selectors = {
   btn: document.querySelector('#btn')
 };
 
-const url = 'https://thesimpsonsquoteapi.glitch.me/quotes';
+const api_url = 'https://thesimpsonsquoteapi.glitch.me/quotes';
 
 const getQuote = async () => {
-  Object.values(selectors).forEach(selector => selector.classList.remove('fade'));
+  try {
+    Object.values(selectors).forEach(selector => selector.classList.remove('fade'));
 
-  const response = await fetch(url);
-  const [{ character, image, quote }] = await response.json();
+    const response = await fetch(api_url);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const [{ character, image, quote }] = await response.json();
 
-  selectors.characterName.textContent = character;
-  selectors.characterImage.src = image;
-  selectors.characterImage.alt = character;
-  selectors.randomQuote.textContent = `"${quote}"`;
+    selectors.characterName.textContent = character;
+    selectors.characterImage.src = image;
+    selectors.characterImage.alt = character;
+    selectors.randomQuote.textContent = `"${quote}"`;
 
-  Object.values(selectors).forEach(selector => selector.classList.add('fade'));
+    Object.values(selectors).forEach(selector => selector.classList.add('fade'));
+  } catch (error) {
+    selectors.randomQuote.textContent = 'Failed to fetch quote. Please try again later.';
+  }
 };
 
 selectors.btn.addEventListener('click', getQuote);
-getQuote();
+document.addEventListener('DOMContentLoaded', getQuote);
