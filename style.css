@@ -1,0 +1,186 @@
+/* @import url("https://fonts.cdnfonts.com/css/homer-simpson-revised");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fab22e;
+  background-image: url("./donut.png");
+  background-size: 8%;
+  font-family: "Homer Simpson Revised", sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 80vmin;
+  padding: 50px 25px;
+  background-color: #15161a;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 6px;
+  box-shadow: 20px 20px 40px rgba(97, 63, 0, 0.4);
+}
+
+span {
+  display: block;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  word-spacing: 8px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 40px;
+  opacity: 0;
+}
+
+blockquote {
+  font-size: 32px;
+  font-size: adjust(24px, 1.5);
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  word-wrap: break-word;
+  line-height: 35px;
+  margin: 30px 0;
+  opacity: 0;
+  text-wrap: anywhere;
+}
+
+button {
+  display: block;
+  background-color: #fab22e;
+  color: #15161a;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 0 auto;
+}
+
+button:hover {
+  background-color: #f3bf5f;
+  transition: all 0.5s ease;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  height: 380px;
+  margin: 30px 0 0;
+}
+
+.fade {
+  opacity: 1;
+  transition: opacity 1.5s;
+}
+
+#logo {
+  display: block;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+} */
+
+@import url("https://fonts.cdnfonts.com/css/homer-simpson-revised");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./assets/donuts.jpg");
+  background-size: 33%;
+  font-family: "Homer Simpson Revised", sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 80vmin;
+  padding: 50px 25px;
+  background-color: #15161a;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 6px;
+  box-shadow: 20px 20px 40px rgba(97, 63, 0, 0.4);
+}
+
+/* #logo {
+  display: block;
+} */
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  height: 380px;
+  margin-top: 30px;
+}
+
+span {
+  display: block;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  word-spacing: 8px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 40px;
+  opacity: 0;
+}
+
+blockquote {
+  font-size: 32px;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  word-wrap: break-word;
+  line-height: 35px;
+  margin-top: 30px;
+  opacity: 0;
+}
+
+button {
+  display: block;
+  background-color: #FDE101;
+  color: #15161a;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 50px auto auto;
+}
+
+button:hover {
+  background-color: #FF9800;
+  color: #15161a;
+  transition: all 0.3s ease-in-out;
+}
+
+.fade {
+  opacity: 1;
+  transition: opacity 1.5s;
+}
